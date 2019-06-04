@@ -1,0 +1,158 @@
+<!-- alle HTML voor boterkaas en eieren -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="text.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <title>Boter Kaas en eieren | Valdemar Vreeman</title>
+</head>
+
+<body onload="start_zet();">
+    <!--audioPlay()-->
+
+    <!-- BEGIN MENU -->
+    <nav class="navbar navbar-light bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" width="40" height="40" alt="Er behoort hier een foto te staan">
+        </a>
+    </nav>
+    <!-- EINDE MENU -->
+
+
+    <!-- BEGIN CONTAINER -->
+    <div class="container mt-5">
+
+        <!-- BEGIN HEADER -->
+        <div class="header">
+            <div class="jumbotron text-center">
+                <h1>Boter Kaas & Eieren</h1>
+                <div class="typewriter">
+                    <p class="lead">Welkom op mijn Boter Kaas & Eieren spel!</p>
+                </div>
+            </div>
+        </div>
+        <!-- EINDE HEADER -->
+
+        <!-- BEGIN ROW -->
+        <div class="row">
+
+            <!-- BEGIN PLAYGROUND -->
+            <div class="col-md-8">
+                <table class="table table-bordered table-dark text-center">
+                    <tbody class="text-uppercase">
+                        <tr>
+                            <td id='teken' class="input_teken" onclick="zetten(this)"></td>
+                            <td id='teken' class="input_teken" onclick="zetten(this)"></td>
+                            <td id='teken' class="input_teken" onclick="zetten(this)"></td>
+                        </tr>
+                        <tr>
+                            <td id='teken' class="input_teken" onclick="zetten(this)"></td>
+                            <td id='teken' class="input_teken" onclick="zetten(this)"></td>
+                            <td id='teken' class="input_teken" onclick="zetten(this)"></td>
+                        </tr>
+                        <tr>
+                            <td id='teken' class="input_teken" onclick="zetten(this)"></td>
+                            <td id='teken' class="input_teken" onclick="zetten(this)"></td>
+                            <td id='teken' class="input_teken" onclick="zetten(this)"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EINDE PLAYGROUND -->
+
+
+            <!-- BEGIN CONTENT ZIJKANT -->
+            <div class="col-md-4">
+
+                <!-- BEGIN SCOREBORD -->
+                <table class="table table-bordered table-hover table-dark text-center informatie">
+                    <thead>
+                        <tr>
+                            <th>Spelers :</th>
+                            <th>Teken :</th>
+                            <th>Score :</th>
+                        </tr>
+                        <tr>
+                            <td class="speler_naam_1" id="naam1" onclick="speler_naam_1()">Speler 1</td>
+                            <td class="rood">O</td>
+                            <td id="punten_speler1" onclick="score()">0</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="speler_naam_2" id="naam2" onclick="speler_naam_2()">Speler 2</td>
+                            <td class="blauw">X</td>
+                            <td id="punten_speler2">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- EINDE SCOREBORD -->
+
+
+                <!-- BEGIN INFORMATIE -->
+                <table class="table table-bordered table-hover table-dark mt-4 informatie">
+                    <thead class=" text-center">
+                        <tr>
+                            <th>Regels :</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="text-left">
+                        <tr>
+                            <td class="regels">U moet 3 tekens op een rij hebben.</td>
+                        </tr>
+                        <tr>
+                            <td class="regels">Je kunt je naam niet veranderen tijdens het spel</td>
+                        </tr>
+                        <tr>
+                            <td class="regels">Geniet van het spel!</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- EINDE INFORMATIE -->
+
+
+                <!-- BEGIN START BUTTON -->
+                <button type="button" id="button" class="btn btn-outline-dark btn-lg btn-block"
+                    onclick="start()">Start</button>
+                <!-- EINDE START BUTTON -->
+
+            </div>
+            <!-- EINDE CONTENT ZIJKANT -->
+
+        </div>
+        <!-- EINDE ROW -->
+
+    </div>
+    <!-- EINDE CONTAINER -->
+
+
+    <!-- BEGIN FOOTER -->
+    <footer class="page-footer font-small bg-dark text-white mt-5">
+
+        <div class="footer-copyright text-center py-3">© 2019 Copyright |
+            <a class="text-white" href="mailto:valdermartje@gmail.com">Valdemar Vreeman</a>
+        </div>
+
+    </footer>
+    <!-- EINDE FOOTER -->
+
+</body>
+
+</html>

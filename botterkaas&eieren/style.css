@@ -1,0 +1,66 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    /* background-image: linear-gradient(to right, #ffafbd, #ffc3a0) !important; */
+    background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: crosshair;
+}
+
+.jumobtron {
+    box-shadow: 30px 40px 20px #9B8277 !important;
+}
+
+.table td, .table th {
+    padding: 0px !important;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+td#teken {
+    font-size: 60px;
+    width: 100px;
+    height: 100px;
+    text-align: center !important;
+}
+
+.informatie .table td, .table th {
+    padding: 10px !important;
+}
+
+td.regels {
+    padding: 7px 0px 6px 35px !important;
+    /* padding-left: 35px !important;
+    padding-top: 6px !important; */
+}
+
+.rood {
+    color: red;
+}
+
+.blauw {
+    color: rgb(140, 140, 196);
+}
+
+.typewriter p {
+    overflow: hidden; 
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
